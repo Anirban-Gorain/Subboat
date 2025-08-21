@@ -1,0 +1,11 @@
+1. Created a N-host account.
+    1. Setup authentication. (https://kjjcgsvslatkvloyeraw.auth.ap-south-1.nhost.run/v1/signup/email-password)
+    
+    2. Setup the database
+        . Schema design
+            . users ==>  For users
+            . chats (id --> PK, user_id --> FK, title, created_at, updated_at) ==> Represents a single chat session
+            . messages (id --> PK, chat_id --> FK, sender --> (users, bot), content, created_at)
+        . Enable row level security
+        . Enable relationship for graphql queries and subscriptions
+        . Setup real time updates
